@@ -1,12 +1,17 @@
 package com.mystore.app;
 
+
+import org.springframework.stereotype.Component;
+
+@Component
 class Product {
     
     private int id;
     private String name;
     private String barcode;
 
-    Barcode barCoder = new Barcode();
+    @AutoWired
+    Barcode barCoder;
 
     public Product() {
         System.out.println("In Product constructor");
